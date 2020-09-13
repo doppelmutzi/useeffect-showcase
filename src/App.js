@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./App.css";
+
+function EffectsDemo1() {
+  const [title, setTitle] = useState("v1");
+  const titleRef = useRef();
+
+  useEffect(() => {
+    console.log("useEffect");
+    document.title = title;
+  });
+
+  const handleClick = () => setTitle(titleRef.current.value);
+  console.log("render");
+  return (
+    <div>
+      <input ref={titleRef} />
+      <button onClick={handleClick}>change title</button>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <EffectsDemo1 />
+    </>
   );
 }
 

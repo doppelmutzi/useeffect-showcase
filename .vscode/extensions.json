@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "dsznajder.es7-react-js-snippets",
+    "skyran.js-jsx-snippets",
+    "timonvs.reactsnippetsstandard",
+    "xabikos.javascriptsnippets",
+    "equimper.react-native-react-redux",
+    "zignd.html-css-class-completion",
+    "christian-kohler.path-intellisense",
+    "wix.vscode-import-cost",
+    "pflannery.vscode-versionlens",
+    "hoovercj.vscode-dimmer",
+    "vscode-icons-team.vscode-icons",
+    "lihui.vs-color-picker",
+    "coenraads.bracket-pair-colorizer-2",
+    "eamodio.gitlens",
+    "sirtori.indenticator",
+    "alefragnani.project-manager",
+    "ericadamski.carbon-now-sh"
+  ]
+}
