@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 export default function () {
-  const [title, setTitle] = useState("v1");
+  const [title, setTitle] = useState("default title");
   const titleRef = useRef();
 
   useEffect(() => {
@@ -10,7 +10,7 @@ export default function () {
   });
 
   const handleClick = () => setTitle(titleRef.current.value);
-  console.log("render");
+  console.log("render no dependency");
   return (
     <div>
       <input ref={titleRef} />

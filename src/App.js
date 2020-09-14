@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
 import EffectsDemoNoDependency from "./EffectsDemoNoDependency";
+import EffectsDemoTwoStates from "./EffectsDemoTwoStates";
 import EffectsDemoUnmount from "./EffectsDemoUnmount";
 
 export default function App() {
   const demoNoDependency = "No dependency array";
+  const demoTwoStates = "Two states";
   const demoUmount = "Unmount child component";
   return (
     <Router>
@@ -17,17 +19,22 @@ export default function App() {
               <Link to="/demoNoDependency">{demoNoDependency}</Link>
             </li>
             <li>
+              <Link to="/demoTwoStates">{demoTwoStates}</Link>
+            </li>
+            <li>
               <Link to="/demoUnmount">{demoUmount}</Link>
             </li>
           </ul>
         </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/demoNoDependency">
             <h2>{demoNoDependency}</h2>
             <EffectsDemoNoDependency />
+          </Route>
+          <Route path="/demoTwoStates">
+            <h2>{demoTwoStates}</h2>
+            <EffectsDemoTwoStates />
           </Route>
           <Route path="/demoUnmount">
             <h2>{demoUmount}</h2>
