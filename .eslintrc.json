@@ -8,7 +8,9 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/no-render-return-value": "off"
+    "react/no-render-return-value": "off",
+    "react/display-name": "off",
+    "react/prop-types": "off"
   },
   "parser": "babel-eslint",
   "env": {
