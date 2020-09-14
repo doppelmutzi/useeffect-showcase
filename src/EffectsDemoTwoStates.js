@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 
-// too many useEffect calls due to state changes
-export default function () {
+import "./EffectsDemoTwoStates.css";
+
+function EffectsDemoTwoStates() {
   const [title, setTitle] = useState("default title");
   const titleRef = useRef();
   const [darkMode, setDarkMode] = useState(false);
@@ -11,11 +12,11 @@ export default function () {
     document.title = title;
   });
 
-  console.log("render demo two states");
+  console.log("render");
   const handleClick = () => setTitle(titleRef.current.value);
   const handleCheckboxChange = () => setDarkMode((prev) => !prev);
   return (
-    <div className={darkMode ? "dark-mode" : ""}>
+    <div className={darkMode ? "view dark-mode" : "view"}>
       <label htmlFor="darkMode">dark mode</label>
       <input
         name="darkMode"
@@ -28,3 +29,5 @@ export default function () {
     </div>
   );
 }
+
+export default EffectsDemoTwoStates;

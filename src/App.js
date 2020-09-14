@@ -8,8 +8,8 @@ import EffectsDemoUnmount from "./EffectsDemoUnmount";
 
 export default function App() {
   const demoNoDependency = "No dependency array";
-  const demoTwoStates = "Two states";
-  const demoUmount = "Unmount child component";
+  const demoTwoStates = "Two states causes unnecessary effects";
+  const demoUmount = "Unmount child component causes error";
   return (
     <Router>
       <div>

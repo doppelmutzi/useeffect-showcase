@@ -1,0 +1,14 @@
+.view {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.view > * + * {
+  margin-left: 5px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
