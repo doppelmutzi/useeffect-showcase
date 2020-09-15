@@ -5,8 +5,10 @@
     "prettier/react",
     "plugin:react/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "react-hooks"],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": "error",
     "react/no-render-return-value": "off",
     "react/display-name": "off",
