@@ -10,6 +10,7 @@ import EffectsDemoUnmount from "./EffectsDemoUnmount";
 import EffectsDemoUnmountCleanup from "./EffectsDemoUnmountCleanup";
 import EffectsDemoEffectOnce from "./EffectsDemoEffectOnce";
 import EffectsDemoProps from "./EffectsDemoProps";
+import EffectsDemoContext from "./EffectsDemoContext";
 
 export default function App() {
   const demoNoDependency = "No dependency array";
@@ -20,6 +21,7 @@ export default function App() {
   const demoUmount = "Unmount child component causes error";
   const demoUmountCleanup = "Unmount child component executes cleanup";
   const demoPropsChange = "Implications with props";
+  const demoContext = "Implications with context";
   return (
     <Router>
       <div>
@@ -50,6 +52,9 @@ export default function App() {
             </li>
             <li>
               <Link to="/demoPropsChange">{demoPropsChange}</Link>
+            </li>
+            <li>
+              <Link to="/demoContext">{demoContext}</Link>
             </li>
           </ul>
         </nav>
@@ -86,6 +91,10 @@ export default function App() {
           <Route path="/demoPropsChange">
             <h2>{demoPropsChange}</h2>
             <EffectsDemoProps />
+          </Route>
+          <Route path="/demoContext">
+            <h2>{demoContext}</h2>
+            <EffectsDemoContext />
           </Route>
           <Route path="/">
             <h2>{demoNoDependency}</h2>
