@@ -3,6 +3,7 @@
   border-radius: 50%;
   width: 10em;
   height: 10em;
+  background-color: red;
 }
 .loader {
   margin: 60px auto;
