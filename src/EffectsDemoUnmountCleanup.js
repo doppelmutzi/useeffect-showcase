@@ -4,12 +4,18 @@ function Counter() {
   const [count, setCount] = useState(0);
   useEffect(() => {
     const interval = setInterval(function () {
-      setCount((prev) => prev + 1);
+      console.log("useEffect");
+      // setCount((prev) => prev + 1);
+      setCount(count + 1);
     }, 1000);
     // return optional function for cleanup
-    // in this case acts like componentWillUnmount
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      console.log("cleanup");
+      clearInterval(interval);
+    };
+  }, [count]);
+  // }, []);
+  console.log("render");
   return <p>and the counter counts {count}</p>;
 }
 
