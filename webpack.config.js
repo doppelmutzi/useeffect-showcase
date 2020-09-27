@@ -1,7 +1,7 @@
 const buildValidations = require("./build-utils/build-validations");
 const commonConfig = require("./build-utils/webpack.common");
 
-const webpackMerge = require("webpack-merge");
+const { merge: webpackMerge } = require("webpack-merge");
 
 const addons = (/* string | string[] */ addonsArg) => {
   let addons = [...[addonsArg]] // Normalize array of addons (flatten)

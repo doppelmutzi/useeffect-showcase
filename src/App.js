@@ -11,6 +11,7 @@ import EffectsDemoUnmountCleanup from "./EffectsDemoUnmountCleanup";
 import EffectsDemoEffectOnce from "./EffectsDemoEffectOnce";
 import EffectsDemoProps from "./EffectsDemoProps";
 import EffectsDemoContext from "./EffectsDemoContext";
+import EffectsDemoCustomHook from "./EffectsDemoCustomHook";
 
 export default function App() {
   const demoNoDependency = "No dependency array";
@@ -22,6 +23,7 @@ export default function App() {
   const demoUmountCleanup = "Unmount child component executes cleanup";
   const demoPropsChange = "Implications with props";
   const demoContext = "Implications with context";
+  const demoCustomHook = "Custom hook (useFetch)";
   return (
     <Router>
       <div>
@@ -55,6 +57,9 @@ export default function App() {
             </li>
             <li>
               <Link to="/demoContext">{demoContext}</Link>
+            </li>
+            <li>
+              <Link to="/demoCustomHook">{demoCustomHook}</Link>
             </li>
           </ul>
         </nav>
@@ -95,6 +100,10 @@ export default function App() {
           <Route path="/demoContext">
             <h2>{demoContext}</h2>
             <EffectsDemoContext />
+          </Route>
+          <Route path="/demoCustomHook">
+            <h2>{demoCustomHook}</h2>
+            <EffectsDemoCustomHook />
           </Route>
           <Route path="/">
             <h2>{demoNoDependency}</h2>
