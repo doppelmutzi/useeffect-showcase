@@ -12,6 +12,7 @@ import EffectsDemoEffectOnce from "./EffectsDemoEffectOnce";
 import EffectsDemoProps from "./EffectsDemoProps";
 import EffectsDemoContext from "./EffectsDemoContext";
 import EffectsDemoCustomHook from "./EffectsDemoCustomHook";
+import EffectsDemoEffectConditional from "./EffectsDemoEffectConditional";
 
 export default function App() {
   const demoNoDependency = "No dependency array";
@@ -24,6 +25,7 @@ export default function App() {
   const demoPropsChange = "Implications with props";
   const demoContext = "Implications with context";
   const demoCustomHook = "Custom hook (useFetch)";
+  const demoEffectConditional = "Effect only once after condition met";
   return (
     <Router>
       <div>
@@ -60,6 +62,9 @@ export default function App() {
             </li>
             <li>
               <Link to="/demoCustomHook">{demoCustomHook}</Link>
+            </li>
+            <li>
+              <Link to="/demoEffectConditional">{demoEffectConditional}</Link>
             </li>
           </ul>
         </nav>
@@ -104,6 +109,10 @@ export default function App() {
           <Route path="/demoCustomHook">
             <h2>{demoCustomHook}</h2>
             <EffectsDemoCustomHook />
+          </Route>
+          <Route path="/demoEffectConditional">
+            <h2>{demoEffectConditional}</h2>
+            <EffectsDemoEffectConditional />
           </Route>
           <Route path="/">
             <h2>{demoNoDependency}</h2>
