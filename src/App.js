@@ -13,6 +13,7 @@ import EffectsDemoProps from "./EffectsDemoProps";
 import EffectsDemoContext from "./EffectsDemoContext";
 import EffectsDemoCustomHook from "./EffectsDemoCustomHook";
 import EffectsDemoEffectConditional from "./EffectsDemoEffectConditional";
+import EffectsDemoEffectPrevData from "./EffectsDemoEffectPrevData";
 
 export default function App() {
   const demoNoDependency = "No dependency array";
@@ -26,6 +27,7 @@ export default function App() {
   const demoContext = "Implications with context";
   const demoCustomHook = "Custom hook (useFetch)";
   const demoEffectConditional = "Effect only once after condition met";
+  const demoEffectPrevData = "Access data from previous render";
   return (
     <Router>
       <div>
@@ -65,6 +67,9 @@ export default function App() {
             </li>
             <li>
               <Link to="/demoEffectConditional">{demoEffectConditional}</Link>
+            </li>
+            <li>
+              <Link to="/demoEffectPrevData">{demoEffectPrevData}</Link>
             </li>
           </ul>
         </nav>
@@ -113,6 +118,10 @@ export default function App() {
           <Route path="/demoEffectConditional">
             <h2>{demoEffectConditional}</h2>
             <EffectsDemoEffectConditional />
+          </Route>
+          <Route path="/demoEffectPrevData">
+            <h2>{demoEffectPrevData}</h2>
+            <EffectsDemoEffectPrevData />
           </Route>
           <Route path="/">
             <h2>{demoNoDependency}</h2>
