@@ -1,1 +1,1 @@
-Companion project to the article _useEffect - explained crystal clear_
+Companion project to my [LogRocket article](https://blog.logrocket.com/guide-to-react-useeffect-hook/) on useEffect.
